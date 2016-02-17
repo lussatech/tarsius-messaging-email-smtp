@@ -1,0 +1,69 @@
+{
+  "name": "tarsius-messaging-email-smtp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "tarsius plugin for send email via smtp 3rd party services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemailer": "^1.10.0",
+    "nodemailer-html-to-text": "^1.0.2",
+    "nodemailer-wellknown": "^0.1.7"
+  },
+  "tarsius": {
+    "type": "messaging.email",
+    "name": "SMTP mail gateway",
+    "configs": [
+      {
+        "name": "service",
+        "title": "layanan / service",
+        "type": "options",
+        "options": [
+          "1und1",
+          "AOL",
+          "DebugMail.io",
+          "DynectEmail",
+          "FastMail",
+          "GandiMail",
+          "Gmail",
+          "Godaddy",
+          "GodaddyAsia",
+          "GodaddyEurope",
+          "hot.ee",
+          "Hotmail",
+          "iCloud",
+          "mail.ee",
+          "Mail.ru",
+          "Mailgun",
+          "Mailjet",
+          "Mandrill",
+          "Naver",
+          "Postmark",
+          "QQ",
+          "QQex",
+          "SendCloud",
+          "SendGrid",
+          "SES",
+          "Sparkpost",
+          "Yahoo",
+          "Yandex",
+          "Zoho"
+        ]
+      },
+      {
+        "name": "user",
+        "title": "username (email)",
+        "type": "string"
+      },
+      {
+        "name": "pass",
+        "title": "password",
+        "type": "password"
+      }
+    ]
+  }
+}
